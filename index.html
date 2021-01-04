@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-​
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <style>
         body{margin: 0;}
         #div1 {
-            border: 1px solid red;
+            border: 1px solid  blue;
             margin-right: 0px;
             margin-left: 0px;
             /*display: inline;
@@ -17,7 +17,7 @@
             padding: 20px;
             margin: 10px; */
         }
-​
+
         #div2 {
             border: 1px solid green;
             /*display: inline;
@@ -36,17 +36,26 @@
         } */
         @media (min-width:600px){
             #div1{
-                margin: 40px;
+               margin:40px
             }
             #div2{
                 margin: 40px;
             }
         }
-​
+         @media (min-width:800px){
+            #div1{
+               
+               color:red;
+            }
+            #div2{
+                color:yellow;
+            }
+        }
+
         
     </style>
 </head>
-​
+
 <body>
     <div id="div1">
         div1
@@ -55,5 +64,5 @@
         div2
     </div>
 </body>
-​
+
 </html>
