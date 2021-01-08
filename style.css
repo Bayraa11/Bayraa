@@ -1,0 +1,133 @@
+*{
+    padding:0;
+    margin:0;
+    list-style: none;
+    text-decoration:none;
+    
+}
+.menu{
+    background:rgb(32, 32, 146);
+    height: 30px;
+   
+}
+.medee{
+    text-align: center;
+    padding-top: 20px;
+    background-color: white;
+
+}
+.medee a{
+    
+    color: black;
+}
+.medee a:hover{
+    color:slategray
+}
+
+nav {
+    background-color: orangered;
+    height:80px;
+
+}
+nav img{
+    margin-left: 80px;
+    margin-top: 20px;
+}
+nav ul{
+    float:right;
+    margin-right: 25px;
+}
+nav ul li{ 
+    display: inline-block;
+    margin-top: 5px;
+    padding-left: 80px;
+    
+
+}
+nav ul li a{ 
+    position: relative;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    text-transform: uppercase;
+   
+}
+nav ul li a::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+
+}
+nav ul li a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+label #btn,
+label #cancel{
+    color:white;
+    font-size: 20px;
+    float:right;
+    line-height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+
+}
+#check{
+    display: none;
+}
+@media(max-width: 640px){
+     nav img{
+        margin-left:180px;
+    }
+    
+}
+@media(max-width: 700px){
+    
+    label #btn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 300px;
+        height:500px;
+      
+        background-color:orangered;
+        
+        top:80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin:50px 0;
+        line-height: 30px;
+
+    }
+    #check:checked ~ ul{
+       
+        left: 0;
+    }
+    #check:checked ~ label #btn{
+        display: none;
+    }
+    #check:checked ~ label #cancel{
+        display: block;
+    }
+    
+
+    
+}
+@media(min-width:640px){
+    .medee{
+         display:none;
+    }
+}
