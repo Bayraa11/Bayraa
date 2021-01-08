@@ -6,14 +6,17 @@
     
 }
 .menu{
-    background:rgb(32, 32, 146);
+    background:orangered;
     height: 30px;
+    
+    
    
 }
 .medee{
     text-align: center;
     padding-top: 20px;
     background-color: white;
+    text-transform: uppercase;
 
 }
 .medee a{
@@ -78,6 +81,7 @@ label #cancel{
     margin-right: 10px;
     cursor: pointer;
     display: none;
+    
 
 }
 #check{
@@ -89,7 +93,7 @@ label #cancel{
     }
     
 }
-@media(max-width: 700px){
+@media(max-width: 650px){
     
     label #btn{
         display: block;
@@ -106,6 +110,9 @@ label #cancel{
         text-align: center;
         transition: all .5s;
     }
+    #check:checked ~ label #cancel{
+        display: block;
+    }
     nav ul li{
         display: block;
         margin:50px 0;
@@ -119,15 +126,14 @@ label #cancel{
     #check:checked ~ label #btn{
         display: none;
     }
-    #check:checked ~ label #cancel{
-        display: block;
-    }
+    
     
 
     
 }
-@media(min-width:640px){
+@media(min-width:600px){
     .medee{
          display:none;
     }
 }
+
